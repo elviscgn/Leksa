@@ -118,3 +118,27 @@ h1 .serif{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;c
   color:rgba(255,255,255,0.9);font-size:15px;font-weight:500;font-family:'Poppins',sans-serif;
   cursor:pointer;transition:all 0.2s;
 }
+.cta-ghost:hover{background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); transform:translateY(-2px);}
+.cta-icon{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* pills */
+.pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center; margin-top: 10px;}
+.pill{
+  display:flex; align-items:center; gap:8px;
+  padding:8px 16px;border-radius:99px;font-size:12px;font-weight:500;
+  color:rgba(255,255,255,0.85);cursor:pointer;transition:all 0.2s;
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+}
+.pill:hover{background:rgba(255,255,255,0.1); transform:translateY(-2px); border-color:var(--gl);}
+.pill img { width: 18px; height: 13px; border-radius: 2px; object-fit: cover; box-shadow: 0 0 2px rgba(0,0,0,0.5); }
+
+/* bottom quote */
+.bq{text-align:center;flex-shrink:0; padding-top: 20px;}
+.bq-label{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px; font-weight: 500;}
+.bq-text{font-size:15px;color:rgba(255,255,255,0.75);margin-bottom:12px;line-height:1.5}
+.bq-text em{font-family:'Source Serif 4',serif;font-style:italic;color:var(--gl)}
+.bq-author{display:flex;align-items:center;justify-content:center;gap:14px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4); font-weight:500;}
+.bq-author span{flex:1;height:1px;background:rgba(255,255,255,0.15);max-width:60px}
+
+/* ── RIGHT PANEL ── */
+.r-top{display:flex;align-items:flex-start;justify-content:space-between; margin-bottom:4px;}
