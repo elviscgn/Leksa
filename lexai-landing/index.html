@@ -238,3 +238,27 @@ h1 .serif{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;c
 /* ── MODALS & TOASTS ── */
 .menu-overlay {
   position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px);
+  z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.menu-overlay.active { opacity: 1; pointer-events: auto; }
+.menu-close { position: absolute; top: 40px; right: 40px; color: #fff; cursor: pointer; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 50%; }
+.menu-links { display: flex; flex-direction: column; gap: 30px; text-align: center; }
+.menu-links a { color: #fff; font-size: 32px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+.menu-links a:hover { color: var(--gl); }
+
+.toast {
+  position: fixed; bottom: 40px; right: 40px; background: var(--g); color: #fff; padding: 16px 24px;
+  border-radius: 16px; font-size: 14px; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transform: translateY(100px); opacity: 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 200;
+  display: flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.2);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1200px) {
+  .outputs-row { grid-template-columns: repeat(2, 1fr); }
+  .feat-cards { flex-direction: column; }
+}
+@media (max-width: 1024px) {
+  .layout { flex-direction:column; padding-bottom: 40px; }
