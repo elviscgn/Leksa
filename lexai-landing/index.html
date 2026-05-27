@@ -190,3 +190,27 @@ h1 .serif{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;c
 .flip-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)}
 .flip:hover .flip-in{transform:rotateY(180deg)}
 .flip-f,.flip-b{position:absolute;inset:0;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:8px;border-radius:12px;font-size:10px;text-align:center;color:rgba(255,255,255,0.8)}
+.flip-f{background:rgba(110,207,160,0.1); border:1px solid rgba(110,207,160,0.2);}
+.flip-b{background:var(--g);transform:rotateY(180deg);font-size:9px;color:#fff; border:1px solid rgba(110,207,160,0.5);}
+
+.badge{font-size:10px;font-weight:600;padding:4px 8px;border-radius:6px;background:rgba(26,122,74,0.6); border:1px solid var(--g); color:#fff;letter-spacing:0.05em}
+.sa{font-size:11px;color:var(--gl);cursor:pointer;margin-top:8px;display:inline-block; font-weight:500; transition:color 0.2s;}
+.sa:hover {color:#fff;}
+.sa-body{display:none;font-size:11px;color:rgba(255,255,255,0.65);margin-top:8px;line-height:1.5;border-top:1px solid rgba(255,255,255,0.1);padding-top:8px}
+
+/* SCROLL HINT - FIXED PLACEMENT */
+.scroll-container { width: 100%; display: flex; justify-content: center; padding: 0 0 30px 0; position: relative; z-index: 10; }
+.scroll-hint{display:inline-flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:color 0.2s; background: rgba(0,0,0,0.4); padding: 10px 24px; border-radius: 99px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.05);}
+.scroll-hint:hover{color:#fff; border-color:rgba(255,255,255,0.2);}
+.scroll-arrow{animation:bob 2s ease-in-out infinite; color:var(--gl);}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* ── CONTENT SECTIONS BELOW FOLD ── */
+.more-content {
+  position:relative; z-index:10; padding:80px 5% 100px;
+  max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:140px;
+}
+.content-section { display:flex; flex-direction:column; gap:48px; opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.content-section.visible { opacity: 1; transform: translateY(0); }
+.section-title { text-align:center; max-width: 700px; margin: 0 auto; }
+.section-title h2 { font-size:clamp(36px, 4vw, 48px); font-weight:500; color:#fff; letter-spacing:-0.03em; line-height:1.1; }
