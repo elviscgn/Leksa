@@ -262,3 +262,27 @@ h1 .serif{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;c
 }
 @media (max-width: 1024px) {
   .layout { flex-direction:column; padding-bottom: 40px; }
+  .left, .right { width:100%; padding:16px; }
+  .right { padding-top:0; }
+  .left-inner { min-height:70vh; }
+  .grid-3 { grid-template-columns:1fr; }
+}
+@media (max-width: 600px) {
+  .cta-row { flex-direction:column; width:100%; }
+  .cta-main, .cta-ghost { width:100%; justify-content:center; }
+  .hero-center { padding: 20px 0; }
+  .bq-author span { display: none; }
+  .r-mid { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- VIDEO BG -->
+<div class="vbg">
+  <video autoplay loop muted playsinline>
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4" type="video/mp4">
+  </video>
+  <div class="grid-bg"></div>
+</div>
+<div class="glow-left"></div>
