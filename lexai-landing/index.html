@@ -166,3 +166,27 @@ h1 .serif{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;c
 .outputs-row{display:grid; grid-template-columns: repeat(4, 1fr); gap:12px}
 .out-card{border-radius:20px;padding:16px 14px;display:flex;flex-direction:column;gap:10px; transition:transform 0.2s;}
 .out-card:hover { transform: translateY(-3px); border-color: rgba(110,207,160,0.3); }
+.out-icon{width:34px;height:34px;border-radius:10px;background:rgba(110,207,160,0.1); border:1px solid rgba(110,207,160,0.2);display:flex;align-items:center;justify-content:center}
+.out-title{font-size:13px;font-weight:500;color:#fff}
+.out-desc{font-size:11px;color:rgba(255,255,255,0.5);line-height:1.5}
+
+.feat-panel{border-radius:32px;padding:16px;display:flex;flex-direction:column;gap:12px; margin-top:auto}
+.feat-cards{display:flex;gap:12px}
+.feat-card{flex:1;border-radius:24px;padding:18px; display:flex; flex-direction:column;}
+.fc-icon{width:32px;height:32px;border-radius:10px;background:rgba(110,207,160,0.1); border:1px solid rgba(110,207,160,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.fc-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:4px}
+.fc-desc{font-size:11px;color:rgba(255,255,255,0.5);line-height:1.5}
+.feat-bottom{border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:16px; transition:all 0.2s; cursor:pointer;}
+.feat-bottom:hover { background:rgba(255,255,255,0.06); }
+.feat-thumb{width:86px;height:56px;border-radius:12px;overflow:hidden;flex-shrink:0;background:rgba(26,122,74,0.15); border:1px solid rgba(110,207,160,0.2);display:flex;align-items:center;justify-content:center}
+.feat-text{flex:1;min-width:0}
+.ft-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:4px}
+.ft-desc{font-size:11px;color:rgba(255,255,255,0.5);line-height:1.5}
+.feat-plus{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:18px;font-weight:300;transition:all 0.2s}
+.feat-bottom:hover .feat-plus{transform:scale(1.1) rotate(90deg); background:var(--g);}
+
+/* FLIP CARD */
+.flip{perspective:600px;width:100%;height:100%;cursor:pointer}
+.flip-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)}
+.flip:hover .flip-in{transform:rotateY(180deg)}
+.flip-f,.flip-b{position:absolute;inset:0;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;padding:8px;border-radius:12px;font-size:10px;text-align:center;color:rgba(255,255,255,0.8)}
