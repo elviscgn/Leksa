@@ -142,3 +142,27 @@ h1 .serif{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;c
 
 /* ── RIGHT PANEL ── */
 .r-top{display:flex;align-items:flex-start;justify-content:space-between; margin-bottom:4px;}
+.social-pill{display:flex;align-items:center;gap:10px;padding:8px 16px;border-radius:99px;cursor:pointer;transition:all 0.2s}
+.social-pill:hover{background:rgba(255,255,255,0.1);}
+.icon-link{color:rgba(255,255,255,0.6);transition:color 0.2s;display:flex;align-items:center;}
+.icon-link:hover{color:#fff}
+.r-top-right{display:flex;gap:10px}
+
+.r-mid{display:flex;gap:14px}
+.community-card{flex:1;padding:18px 20px;border-radius:20px; display:flex; flex-direction:column; justify-content:center;}
+.cc-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:6px}
+.cc-desc{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5}
+.rec-card{padding:18px 20px;border-radius:20px;display:flex;flex-direction:column;gap:12px;min-width:0; background:rgba(20,60,35,0.4); border:1px solid rgba(110,207,160,0.2);}
+.rec-head{display:flex;align-items:center;gap:8px}
+.rec-dot{width:8px;height:8px;border-radius:50%;background:#ef4444;flex-shrink:0;animation:rd 1.2s ease-in-out infinite; box-shadow:0 0 8px #ef4444;}
+@keyframes rd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
+.rec-label{font-size:12px;font-weight:500;color:rgba(255,255,255,0.8)}
+.rec-course{margin-left:auto;font-size:11px;color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;}
+.waveform{display:flex;align-items:center;gap:3px;height:24px}
+.wbar{width:3px;border-radius:2px;background:var(--gl);animation:wv 1.3s ease-in-out infinite}
+@keyframes wv{0%,100%{transform:scaleY(0.2)}50%{transform:scaleY(1)}}
+.rec-langs{font-size:11px;color:rgba(255,255,255,0.5)}
+
+.outputs-row{display:grid; grid-template-columns: repeat(4, 1fr); gap:12px}
+.out-card{border-radius:20px;padding:16px 14px;display:flex;flex-direction:column;gap:10px; transition:transform 0.2s;}
+.out-card:hover { transform: translateY(-3px); border-color: rgba(110,207,160,0.3); }
