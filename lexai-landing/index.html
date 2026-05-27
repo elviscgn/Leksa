@@ -214,3 +214,27 @@ h1 .serif{font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;c
 .content-section.visible { opacity: 1; transform: translateY(0); }
 .section-title { text-align:center; max-width: 700px; margin: 0 auto; }
 .section-title h2 { font-size:clamp(36px, 4vw, 48px); font-weight:500; color:#fff; letter-spacing:-0.03em; line-height:1.1; }
+.section-title p { font-size:18px; color:var(--gl); margin-top:12px; font-weight:400; opacity:0.9;}
+
+.grid-3 { display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; }
+.info-card { 
+  padding:40px 32px; border-radius:28px; display:flex; flex-direction:column; gap:20px; 
+  transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(145deg, rgba(20,60,35,0.2) 0%, rgba(10,25,15,0.6) 100%);
+  border: 1px solid rgba(110,207,160,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.info-card:hover { transform:translateY(-8px); border-color: rgba(110,207,160,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.05); }
+.ic-num { font-family:'Source Serif 4', serif; font-style:italic; font-size:54px; color:rgba(110,207,160,0.4); line-height:1; margin-bottom:8px; }
+.ic-icon { width:56px; height:56px; border-radius:16px; background:rgba(110,207,160,0.1); display:flex; align-items:center; justify-content:center; color:var(--gl); margin-bottom:8px; border: 1px solid rgba(110,207,160,0.2); }
+.info-card h3 { font-size:22px; font-weight:500; color:#fff; letter-spacing:-0.01em; }
+.info-card p { font-size:15px; color:rgba(255,255,255,0.6); line-height:1.6; }
+
+.footer-cta { padding:80px 40px; border-radius:40px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:24px; position:relative; overflow:hidden;}
+.footer-cta::before { content:''; position:absolute; top:-50%; left:50%; transform:translateX(-50%); width:600px; height:600px; background:radial-gradient(circle, rgba(26,122,74,0.3) 0%, transparent 70%); pointer-events:none; }
+.footer-cta h2 { font-size:clamp(32px, 4vw, 42px); font-weight:500; color:#fff; letter-spacing:-0.03em; z-index:2; }
+.footer-cta p { color:rgba(255,255,255,0.65); max-width:480px; font-size:16px; line-height:1.6; z-index:2; }
+
+/* ── MODALS & TOASTS ── */
+.menu-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px);
