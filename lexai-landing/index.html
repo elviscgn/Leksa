@@ -622,3 +622,27 @@ for(let i = 0; i < 30; i++){
 
 // Show answer toggle for mock exam question
 function toggleSA(el){
+  const b = el.nextElementSibling;
+  const open = b.style.display === 'block';
+  b.style.display = open ? 'none' : 'block';
+  el.textContent = open ? 'Show Answer ›' : 'Hide Answer ›';
+}
+
+// Menu Toggle
+function toggleMenu() {
+  const menu = document.getElementById('menuOverlay');
+  menu.classList.toggle('active');
+}
+
+// Toast Notifications
+let toastTimeout;
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  const msgSpan = document.getElementById('toastMsg');
+  msgSpan.textContent = message;
+  
+  toast.classList.add('show');
+  
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
